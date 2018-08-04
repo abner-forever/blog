@@ -1,0 +1,268 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body,
+html {
+	height: 1000px;
+	background: #0B0619 url(../img/indexbg.png) center top no-repeat;
+	font-family: "微软雅黑";
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.header {
+	width: 1000px;
+	height: 200px;
+	margin: 0 auto;
+}
+
+h1 {
+	line-height: 130px;
+	color: #fff;
+}
+
+.header .nav {
+	height: 80px;
+}
+
+.header .nav li {
+	float: left;
+	/*line-height: 80px;*/
+	margin-right: 30px;
+	position: relative;
+}
+
+.header .nav li a {
+	color: #fff;
+}
+
+.header .nav li .en-href {
+	font-size: 14px;
+	position: absolute;
+	top: 18px;
+	left: 2px;
+	display: none;
+}
+
+.header .nav li:hover .en-href {
+	display: block;
+}
+
+.tbody {
+	width: 960px;
+	position: relative;
+	top: 0;
+	bottom: 0;
+	/*background-color: #3076AF;*/
+	margin: 0 auto;
+	background: rgba(255, 255, 255, 0.1);
+	overflow: hidden;
+	padding: 20px;
+}
+
+.tbody .inner-body {
+	width: 960px;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.1);
+	position: relative;
+}
+
+.tbody .inner-body .nav {
+	clear: both;
+}
+
+.tbody .inner-body .nav li {
+	width: 270px;
+	height: 430px;
+	background-color: #fff;
+	float: left;
+	margin-left: 22px;
+	padding: 10px;
+	margin-top: 20px;
+}
+
+
+
+/*图片*/
+
+.tbody .inner-body .nav li .wrapper {
+	width: 270px;
+	height: 430px;
+	overflow: hidden;
+	position: relative;
+	background-color: #ECECEC;
+}
+
+.tbody .inner-body .nav li .wrapper img {
+	width: 270px;
+	height: 256px;
+}
+/* 图片遮罩 */
+.tbody .inner-body .nav li .cover-wrapper {
+	width: 100%;
+	height: 256px;
+	position: absolute;
+	text-align: center;
+	vertical-align: middle;
+	background-color: rgba(0, 0, 0, 0.4);
+	display: none;
+	color: #FFFFFF;
+}
+
+.tbody .inner-body .nav li .wrapper:hover .cover-wrapper {
+	display: block;
+}
+
+.tbody .inner-body .nav li .cover-wrapper span {
+	display: block;
+}
+
+.tbody .inner-body .nav li .cover-wrapper .yumao {
+	width: 50px;
+	height: 106px;
+}
+
+.tbody .inner-body .nav li h4 {
+	width: 100%;
+	font-size: 14px;
+	color: green;
+	text-align: center;
+	line-height: 60px;
+	float: left;
+	display: block;
+}
+
+.tbody .inner-body .nav li p {
+	padding: 10px;
+	font-size: 14px;
+	float: left;
+}
+
+.tab-dynamic li {
+	width: 960px;
+	height: 206px;
+	float: left;
+	margin-bottom: 20px;
+}
+
+.tab-dynamic li .left {
+	width: 200px;
+	height: 206px;
+	float: left;
+	position: relative;
+}
+
+.tab-dynamic .serial {
+	width: 135px;
+	height: 60px;
+	float: right;
+	border-radius: 20px 0 0 20px;
+	transition: 2s all;
+}
+
+.tab-dynamic .left .circle {
+	width: 12px;
+	height: 12px;
+	position: absolute;
+	top: 18px;
+	right: -11px;
+	border-radius: 50%;
+	background-color: #0B0619;
+	border: 3px solid #AFDCF8;
+}
+
+.tab-dynamic .serial:hover {
+	background-color: #fff;
+}
+
+.tab-dynamic .serial p {
+	line-height: 28px;
+	margin-left: 55px;
+	color: #B9CDD9;
+}
+
+.tab-dynamic .serial .p1 {
+	font-size: 22px;
+	color: #0B0619;
+}
+
+.tab-dynamic li .right {
+	width: 673px;
+	height: 206px;
+	background-color: #0B0619;
+	float: left;
+	padding-left: 30px;
+	margin-left: 30px;
+	border-radius: 5px;
+	position: relative;
+	color: #fff;
+}
+
+.tab-dynamic li .right h4 {
+	line-height: 50px;
+}
+
+.tab-dynamic li .right .img {
+	width: 200px;
+	height: 125px;
+	float: left;
+	overflow: hidden;
+}
+
+.tab-dynamic li .right img {
+	width: 100%;
+	display: block;
+}
+
+.tab-dynamic li .right .angle {
+	width: 0px;
+	height: 0px;
+	border-width: 15px;
+	border-style: solid;
+	border-color: transparent #0B0619 transparent transparent;
+	position: absolute;
+	top: 4px;
+	left: -30px;
+}
+.tab-dynamic li .right p{
+	margin-left: 220px;
+	line-height: 28px;
+}
+.cab {
+	margin: 30px 0 0 0;
+	padding: 0;
+	list-style: none;
+	position: relative;
+	float: left;
+}
+
+.cab:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 5px;
+	background: #afdcf8;
+	left: 209px;
+	margin-left: -10px;
+}
+
+.footer {
+	width: 100%;
+	height: 50px;
+}
+
+.footer p {
+	width: 1000px;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 50px;
+}

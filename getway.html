@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>GotoWay</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body,
+		html {
+			background-color: #f2f2f2;
+		}
+
+		li {
+			list-style: none;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		.layout {
+			width: 100%;
+			height: 100%;
+			margin: 0 auto;
+		}
+
+		.header {
+			width: 1000px;
+			height: 65px;
+			margin: 0 auto;
+			overflow: hidden;
+		}
+
+		.logo {
+			display: inline-block;
+			margin-top: 13px;
+		}
+
+		.item {
+			width: 500px;
+			height: 100%;
+			float: right;
+		}
+
+		.item li {
+			float: left;
+			height: 65px;
+			line-height: 65px;
+			margin-left: 35px;
+		}
+
+		.item li a {
+			color: #4a4a4a;
+			font-size: 14px;
+		}
+
+		.img {
+			width: 1100px;
+			height: 423px;
+			margin: 0 auto;
+		}
+
+		.content {
+			width: 1000px;
+			height: 335px;
+			margin: 0 auto;
+		}
+
+		.services {
+			width: 513px;
+			height: 100%;
+			float: left;
+		}
+
+		.tag {
+			width: 122px;
+			height: 50px;
+			background-color: #00b5ee;
+			color: #fff;
+			font-size: 20px;
+			line-height: 50px;
+			text-align: center;
+		}
+
+		.select {
+			margin-bottom: 122px;
+		}
+
+		.select h4 {
+			color: #00b5ee;
+			display: inline-block;
+			float: left;
+			margin-top: 10px;
+		}
+
+		.select p {
+			width: 333px;
+			float: right;
+			margin-top: 10px;
+			font-size: 12px;
+			color: #646464;
+			padding-left: 50px;
+			padding-right: 50px;
+		}
+
+		.cases {
+			width: 487px;
+			height: 335px;
+			float: left;
+		}
+
+		.cases .images {
+			height: 216px;
+			width: 100%;
+			margin-top: 18px;
+		}
+
+		.about {
+			width: 1000px;
+			height: 335px;
+			margin: 0 auto;
+			overflow: hidden;
+		}
+
+		.about .title {
+			font-size: 18px;
+			color: #232323;
+			margin-top: 20px;
+		}
+
+		.about .more {
+			width: 100%;
+			display: block;
+			float: right;
+			margin-right: 10px;
+			color: #969696;
+			margin-bottom: 20px;
+			margin-top: 15px;
+			text-align: right;
+		}
+
+		.about-us {
+			width: 303px;
+			height: 335px;
+			float: left;
+		}
+
+		.about-us p {
+			float: left;
+			font-size: 12px;
+			line-height: 20px;
+			width: 255px;
+			color: #7c7c7c;
+		}
+
+		p.end {
+			margin-top: 45px;
+		}
+
+		.news {
+			width: 300px;
+			height: 335px;
+			border-left: 1px solid #fff;
+			border-right: 1px solid #fff;
+			float: left;
+		}
+
+		.news .img {
+			width: 246px;
+			height: 67px;
+			margin: 18px auto;
+		}
+
+		.news p {
+			width: 245px;
+			margin: 50px auto;
+			font-size: 12px;
+			line-height: 20px;
+			color: #7c7c7c;
+		}
+
+		.activity {
+			width: 392px;
+			height: 335px;
+			float: left;
+		}
+
+		.activity ul {
+			margin-top: 50px;
+		}
+
+		.activity li {
+			font-size: 12px;
+			line-height: 30px;
+			color: #7a7a7a;
+		}
+
+		.activity li a {
+			color: #7a7a7a;
+		}
+
+		.activity span {
+			float: right;
+		}
+
+		.footer {
+			width: 100%;
+			height: 230px;
+			background-color: #383838;
+		}
+
+		.right {
+			width: 1100px;
+			height: 230px;
+			margin: 0 auto;
+			position: relative;
+		}
+
+		.title1 {
+			width: 100%;
+			height: 50px;
+		}
+
+		.title1 li {
+			width: 70px;
+			float: left;
+			margin-top: 35px;
+			text-align: center;
+			/* border-right: 1px solid #979797; */
+			position: relative;
+		}
+		
+		.title1 li.line::after{
+			content: "";
+			height: 14px;
+			width: 1px;
+			display: block;
+			background-color: #979797;
+			position: absolute;
+			right: 0;
+			top: 4px;
+			bottom: 0;
+		}
+
+		.title1 li a {
+			color: #d3d3d3;
+			font-size: 14px;
+		}
+
+		.address {
+			width: 455px;
+			height: 100px;
+			float: left;
+			clear: both;
+			margin-top: 15px;
+		}
+
+		.address p {
+			font-size: 12px;
+			color: #929292;
+			line-height: 20px;
+		}
+
+		.tel {
+			width: 200px;
+			height: 50px;
+			float: right;
+		}
+
+		.tel span {
+			font-size: 12px;
+			color: #bfbfbf;
+		}
+
+		.tel p {
+			font-size: 20px;
+			color: #bfbfbf;
+		}
+
+		.copyright {
+			color: #7c7c7c;
+			position: absolute;
+			bottom: 33px;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- 版心 1100px -->
+	<div class="layout">
+		<!-- header -->
+		<div class="header">
+			<h1 class="logo">
+				<img src="img/gotoway_03.png" alt="">
+			</h1>
+			<div class="item">
+				<ul>
+					<li>
+						<a href="#">案例作品</a>
+					</li>
+					<li>
+						<a href="#">网站建设</a>
+					</li>
+					<li>
+						<a href="#">整合营销</a>
+					</li>
+					<li>
+						<a href="#">新闻资讯</a>
+					</li>
+					<li>
+						<a href="#">关于我们</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 轮播图 -->
+		<div class="img">
+			<img src="img/gotoway_06.png" title="360°建站" alt="">
+		</div>
+		<!-- 内容 -->
+		<div class="content">
+			<div class="services">
+				<div class="tag">SERVICES</div>
+				<div class="select">
+					<h4>简约版套餐</h4>
+					<p>企业首选的网站建设方案，成本低，标准设计页面，一最简洁的形式反映企业简介、服务内容，产品信息和联系方式等</p>
+				</div>
+				<div class="select">
+					<h4>基础项套餐</h4>
+					<p>企业首选的网站建设方案，成本低，标准设计页面，一最简洁的形式反映企业简介、服务内容，产品信息和联系方式等</p>
+				</div>
+			</div>
+			<div class="cases">
+				<div class="tag">CASES</div>
+				<div class="images">
+					<img src="img/gotoway_09.png" alt="">
+					<img src="img/gotoway_11.png" alt="">
+					<img src="img/gotoway_13.png" alt="">
+				</div>
+			</div>
+		</div>
+		<div class="about">
+			<div class="about-us">
+				<div class="title">关于我们</div>
+				<span class="more">MORE+</span>
+				<p>寻众人之力，程细节之美</p>
+				<p>寻程（gotoway）科技有限公司成立于上海</p>
+				<p>注册资金500万；以企业网站设计</p>
+				<p class="end">以企业网站设计，整合传播为核心，以企业网站为基础合理有效的向企业目标客户定向传播品牌信息满足客户获取信息，消费等需求</p>
+			</div>
+			<div class="news">
+				<div class="title">新闻中心</div>
+				<span class="more">MORE+</span>
+				<div class="img">
+					<img src="img/gotoway_19.png" alt="">
+				</div>
+				<p>以企业网站设计，整合传播为核心，以企业网站为基础合理有效的向企业目标客户定向传播品牌信息满足客户获取信息，消费等需求</p>
+			</div>
+			<div class="activity">
+				<div class="title">优惠活动</div>
+				<span class="more">MORE+</span>
+				<ul>
+					<li>
+						<a href="#">【推荐】网站设计制作详细报价</a>
+						<span>2018-07-25</span>
+					</li>
+					<li>
+						<a href="#">【推荐】网站设计制作详细报价</a>
+						<span>2018-07-26</span>
+					</li>
+					<li>
+						<a href="#">【推荐】网站设计制作详细报价</a>
+						<span>2018-07-27</span>
+					</li>
+					<li>
+						<a href="#">【推荐】网站设计制作详细报价</a>
+						<span>2018-07-26</span>
+					</li>
+					<li>
+						<a href="#">【推荐】网站设计制作详细报价</a>
+						<span>2018-07-26</span>
+					</li>
+					<li>
+						<a href="#">【推荐】网站设计制作详细报价</a>
+						<span>2018-07-26</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 网站建设 -->
+		<div class="const">
+			<ul>
+				<li>
+					<a href="#"></a>
+				</li>
+				<li>
+					<a href="#"></a>
+				</li>
+				<li>
+					<a href="#"></a>
+				</li>
+				<li>
+					<a href="#"></a>
+				</li>
+				<li>
+					<a href="#"></a>
+				</li>
+				<li>
+					<a href="#"></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- 底部 -->
+	<div class="footer">
+		<div class="right">
+			<div class="title1">
+				<ul>
+					<li class="line">
+						<a href="#">首页</a>
+					</li>
+					<li class="line">
+						<a href="#">案例</a>
+					</li>
+					<li class="line">
+						<a href="#">关于</a>
+					</li>
+					<li class="line">
+						<a href="#">服务</a>
+					</li>
+					<li class="line">
+						<a href="#">营销</a>
+					</li>
+					<li class="line">
+						<a href="#">联系</a>
+					</li>
+					<li>
+						<a href="#">新闻</a>
+					</li>
+				</ul>
+			</div>
+			<div class="address">
+				<p>上海市天西路 290号 1501（上海火车站旁）沪ICP备1204896号 -1</p>
+				<p>业务资讯: 8621-65515555/8621316512/400-485-2855转1</p>
+				<p>售后服务: 8621-65515555/8621316512</p>
+				<p>公司传真: 8621-65515555</p>
+			</div>
+			<div class="tel">
+				<span>免费热线</span>
+				<p>8621-61555551</p>
+			</div>
+			<span class="copyright">版权所有@寻程网络科技有限公司</span>
+		</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+
+body,input,p,ul {
+	margin: 0; padding: 0;
+}
+
+html,body {
+	height: 100%;
+	font: 12px "微软雅黑";
+	background-color: #f6f6f6;
+	width: 100%;
+}
+
+ul,button,input {
+	list-style: none;
+	border: none;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+

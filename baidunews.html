@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>百度新闻</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    @font-face {
+        font-family: "imooc-icon";
+        src: url("fonts/icomoon.eot");
+        /* IE9 兼容模式 */
+        src: url("fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("fonts/icomoon.woff") format("woff"), url("fonts/icomoon.ttf") format("truetype"), url("fonts/icomoon.svg") format("svg");
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    .top {
+        width: 100%;
+        height: 32px;
+        border-bottom: 1px solid #ebebeb;
+    }
+
+    .option {
+        float: right;
+        line-height: 32px;
+        font-size: 14px;
+    }
+
+    .option li {
+        float: left;
+        margin-right: 22px;
+        font-weight: bold;
+    }
+
+    .user {
+        float: right;
+        line-height: 32px;
+        font-size: 14px;
+        position: relative;
+    }
+
+    .user li {
+        float: left;
+        margin-right: 22px;
+    }
+
+    .user span {
+        position: absolute;
+        right: 126px;
+    }
+
+    .top a {
+        color: #333333;
+    }
+
+    .header {
+        width: 985px;
+        height: 105px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .logo {
+        float: left;
+        margin-top: 23px;
+    }
+
+    .search-input {
+        width: 535px;
+        height: 38px;
+        float: left;
+        margin-left: 60px;
+        margin-top: 32px;
+        outline: none;
+        border: 1px solid #b8b8b8;
+        border-right: 0;
+    }
+
+    .search-submit {
+        width: 104px;
+        height: 40px;
+        border: 0;
+        outline: none;
+        background-color: #3388ff;
+        text-align: center;
+        line-height: 40px;
+        color: #fff;
+        font-size: 16px;
+        margin-top: 32px;
+        float: left;
+    }
+
+    .radio {
+        width: 200px;
+        height: 32px;
+        float: left;
+        margin-left: 60px;
+        line-height: 32px;
+        color: #666666;
+        font-size: 12px;
+        vertical-align: middle;
+    }
+
+    input[type=radio] {
+        float: left;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+    .radio span {
+        float: left;
+        margin-left: 5px;
+    }
+
+    .set {
+        position: absolute;
+        right: 0;
+        top: 42px;
+    }
+
+    .set li {
+        float: left;
+        font-size: 12px;
+        margin-left: 14px;
+    }
+
+    .set a {
+        color: #333333;
+    }
+
+    .layout {
+        width: 100%;
+        height: 40px;
+        background-color: #01204f;
+    }
+
+    .nav {
+        width: 985px;
+        height: 40px;
+        margin: 0 auto;
+    }
+
+    .nav li {
+    	height: 40px;
+        float: left;
+        line-height: 40px;
+        font-family: "imooc-icon";
+    }
+
+    .nav a {
+        height: 40px;
+        display: inline-block;
+        color: #fff;
+        text-decoration: none;
+        font-size: 12px;
+        padding-left: 10px;
+        padding-right: 10px;
+        line-height: 40px;
+    }
+
+    .nav li:hover {
+        background-color: #cc0000;
+    }
+    .news{
+    	width: 985px;
+    	height: 1192px;
+    	margin: 23px auto;
+    	background-color: pink;
+    }
+    .content li{
+    	line-height: 30px;
+    }
+    .content a{
+    	font-size: 15px;
+    	text-decoration: none;
+    	color: #222222;
+    }
+    .content a:hover{
+    	text-decoration: underline;
+    }
+    .hotnews .title{
+    	width: 390px;
+    	border-bottom: 1px solid #e5e5e5;
+    }
+    .hotnews h4{
+    	width: 112px;
+    	height: 28px;
+    	border-bottom: 2px solid #2f63ba; 
+    	color: #2f63ba;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- 顶部 -->
+    <div class="top">
+        <div class="user">
+            <ul>
+                <li><a href="#">百度首页</a></li>
+                <li><a href="#">yt3929033</a></li><span>▼</span>
+                <li><a href="#">百度新闻客户端</a></li>
+            </ul>
+        </div>
+        <div class="option">
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">新闻</a></li>
+                <li><a href="#">贴吧</a></li>
+                <li><a href="#">知道</a></li>
+                <li><a href="#">音乐</a></li>
+                <li><a href="#">图片</a></li>
+                <li><a href="#">视频</a></li>
+                <li><a href="#">地图</a></li>
+                <li><a href="#">文库</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- 头部 -->
+    <!--  输入框 535 38 -->
+    <div class="header">
+        <h1 class="logo"><a href="https://news.baidu.com"><img src="img/baidu_03.png" alt=""></a></h1>
+        <div class="search">
+            <input type="text" class="search-input">
+            <input type="submit" class="search-submit" value="百度一下">
+            <div class="radio">
+                <input type="radio" name="news" value="content"><span>新闻全文</span>
+                <input type="radio" name="news" value="title"><span>新闻标题</span>
+            </div>
+            <div class="set">
+                <ul>
+                    <li><a href="#">帮助</a></li>
+                    <li><a href="#">高级搜索</a></li>
+                    <li><a href="#">设置</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 菜单栏 -->
+    <div class="layout">
+        <div class="nav">
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">国内</a></li>
+                <li><a href="#">国际</a></li>
+                <li><a href="#">军事</a></li>
+                <li><a href="#">财经</a></li>
+                <li><a href="#">娱乐</a></li>
+                <li><a href="#">体育</a></li>
+                <li><a href="#">互联网</a></li>
+                <li><a href="#">科技</a></li>
+                <li><a href="#">游戏</a></li>
+                <li><a href="#">女人</a></li>
+                <li><a href="#">汽车</a></li>
+                <li><a href="#">房产</a></li>
+                <li><a href="#">个性推荐</a></li>
+            </ul>
+        </div>
+    </div>
+  	<!-- 热点新闻 -->
+    <div class="news">
+    	<div class="hotnews">
+    		<div class="title">
+    			<h4>热点新闻</h4>
+    			<img src="" alt="">	
+    		</div>
+			<div class="content">
+				<ul>
+					<li><img src="img/baidu_01.png" alt=""><a href="#">金砖会晤今天举行，四大看点不容错过</a></li>
+					<li><img src="img/baidu_01.png" alt=""><a href="#">金砖会晤今天举行，四大看点不容错过</a></li>
+					<li><img src="img/baidu_01.png" alt=""><a href="#">金砖会晤今天举行，四大看点不容错过</a></li>
+					<li><img src="img/baidu_01.png" alt=""><a href="#">金砖会晤今天举行，四大看点不容错过</a></li>
+					<li><img src="img/baidu_01.png" alt=""><a href="#">金砖会晤今天举行，四大看点不容错过</a></li>
+					<li><img src="img/baidu_01.png" alt=""><a href="#">金砖会晤今天举行，四大看点不容错过</a></li>
+					<li><img src="img/baidu_01.png" alt=""><a href="#">金砖会晤今天举行，四大看点不容错过</a></li>
+					<li><img src="img/baidu_01.png" alt=""><a href="#">金砖会晤今天举行，四大看点不容错过</a></li>
+					<li><img src="img/baidu_01.png" alt=""><a href="#">金砖会晤今天举行，四大看点不容错过</a></li>
+					<li><img src="img/baidu_01.png" alt=""><a href="#">金砖会晤今天举行，四大看点不容错过</a></li>
+					<li><img src="img/baidu_01.png" alt=""><a href="#">金砖会晤今天举行，四大看点不容错过</a></li>
+					<li><img src="img/baidu_01.png" alt=""><a href="#">金砖会晤今天举行，四大看点不容错过</a></li>
+					<li><img src="img/baidu_01.png" alt=""><a href="#">金砖会晤今天举行，四大看点不容错过</a></li>
+					<li><img src="img/baidu_01.png" alt=""><a href="#">金砖会晤今天举行，四大看点不容错过</a></li>
+					<li><img src="img/baidu_01.png" alt=""><a href="#">金砖会晤今天举行，四大看点不容错过</a></li>
+					<li><img src="img/baidu_01.png" alt=""><a href="#">金砖会晤今天举行，四大看点不容错过</a></li>
+					<li><img src="img/baidu_01.png" alt=""><a href="#">金砖会晤今天举行，四大看点不容错过</a></li>
+					<li><img src="img/baidu_01.png" alt=""><a href="#">金砖会晤今天举行，四大看点不容错过</a></li>
+					<li><img src="img/baidu_01.png" alt=""><a href="#">金砖会晤今天举行，四大看点不容错过</a></li>
+					<li><img src="img/baidu_01.png" alt=""><a href="#">金砖会晤今天举行，四大看点不容错过</a></li>
+					<li><img src="img/baidu_01.png" alt=""><a href="#">金砖会晤今天举行，四大看点不容错过</a></li>
+					<li><img src="img/baidu_01.png" alt=""><a href="#">金砖会晤今天举行，四大看点不容错过</a></li>
+					<li><img src="img/baidu_01.png" alt=""><a href="#">金砖会晤今天举行，四大看点不容错过</a></li>
+					<li><img src="img/baidu_01.png" alt=""><a href="#">金砖会晤今天举行，四大看点不容错过</a></li>
+					<li><img src="img/baidu_01.png" alt=""><a href="#">金砖会晤今天举行，四大看点不容错过</a></li>
+					<li><img src="img/baidu_01.png" alt=""><a href="#">金砖会晤今天举行，四大看点不容错过</a></li>
+					<li><img src="img/baidu_01.png" alt=""><a href="#">金砖会晤今天举行，四大看点不容错过</a></li>
+					<li><img src="img/baidu_01.png" alt=""><a href="#">金砖会晤今天举行，四大看点不容错过</a></li>
+					<li><img src="img/baidu_01.png" alt=""><a href="#">金砖会晤今天举行，四大看点不容错过</a></li>
+					<li><img src="img/baidu_01.png" alt=""><a href="#">金砖会晤今天举行，四大看点不容错过</a></li>
+					<li><img src="img/baidu_01.png" alt=""><a href="#">金砖会晤今天举行，四大看点不容错过</a></li>
+					<li><img src="img/baidu_01.png" alt=""><a href="#">金砖会晤今天举行，四大看点不容错过</a></li>
+					<li><img src="img/baidu_01.png" alt=""><a href="#">金砖会晤今天举行，四大看点不容错过</a></li>
+					<li><img src="img/baidu_01.png" alt=""><a href="#">金砖会晤今天举行，四大看点不容错过</a></li>
+					<li><img src="img/baidu_01.png" alt=""><a href="#">金砖会晤今天举行，四大看点不容错过</a></li>
+					<li><img src="img/baidu_01.png" alt=""><a href="#">金砖会晤今天举行，四大看点不容错过</a></li>
+				</ul>
+			</div>
+    	</div>
+    </div>
+</body>
+
+</html>

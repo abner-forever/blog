@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>百度一下</title>
+	<link rel="icon" href="img/baiduico.ico"/>
+	
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		.container{
+			width: 641px;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: auto;
+		}
+		.logo{
+			width: 540px;
+			height: 218px;
+			margin: 0 auto;
+			background: #fff url(img/bd_logo.png) center bottom no-repeat;
+			background-size: 50%;
+			margin-bottom: 40px;
+		}
+		.search-box{
+			width: 641px;
+			height: 36px;
+			position: relative;
+		}
+		.keyword{
+			height: 34px;
+			width: 535px;
+			border:1px solid #ccc;
+			float: left;
+			border-right: 0;
+			padding-left: 5px;
+			outline: none;
+			font-size: 16px;
+			color: #3f3f3f;
+		}
+		.btn{
+			width: 100px;
+			height: 36px;
+			float: right;
+			background-color: #3385FF;
+			color: #fff;
+			border:0;
+			cursor: pointer;
+			font-size: 15px;
+			line-height: 36px;
+		}
+		.btn:hover{
+			background-color: #2868c8;
+			box-shadow: 1px 1px 1px #2868c8;
+		}
+		.search-box .photo{
+			width: 18px;
+			height: 16px;
+			background: #fff url(img/camera_new_5606e8f.png) 0 0 no-repeat;
+			position: absolute;
+			top: 10px;
+			right: 110px;
+		}
+		.search-box .keyword:focus{
+			border-color: #3385FF;
+		}
+		.search-box .photo:hover{
+			background-position: 0 -20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="logo"></div>
+		<div class="search-box">
+			<form action="https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=0&rsv_idx=1&tn=baidu&wd=?" method="get" target="_blank">
+				<i class="photo"></i>
+				<input type="text" class="keyword" name="wd">
+				<input type="submit" class="btn" value="百度一下">
+			</form>
+			
+		</div>
+	</div>
+</body>
+</html>
