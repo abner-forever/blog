@@ -2,7 +2,11 @@
     padding: 0;
     margin: 0;
 }
-
+body,html{
+    width: 100%;
+    height: 100%;
+    font-family: "微软雅黑";
+}
 li {
     list-style: none;
     font-family: 'icomoon';
@@ -11,18 +15,9 @@ li {
 a {
     text-decoration: none;
 }
-
-@font-face {
-    font-family: 'icomoon';
-    src: url('../fonts/icomoon.eot?bcah2l');
-    src: url('../fonts/icomoon.eot?bcah2l#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?bcah2l') format('truetype'),
-    url('../fonts/icomoon.woff?bcah2l') format('woff'),
-    url('../fonts/icomoon.svg?bcah2l#icomoon') format('svg');
-    font-weight: normal;
-    font-style: normal;
+i{
+    font-size: 14px;
 }
-
 .header {
     width: 100%;
     height: 640px;
@@ -42,7 +37,7 @@ a {
     height: 50px;
     border-right: 1px solid #3E4447;
     background: url(../images/TB17mppCFOWBuNjy0FiXXXFxVXa-36-28.png) center center no-repeat;
-    background-size: 50%;
+    background-size: 38%;
     float: left;
     position: relative;
 }
@@ -50,7 +45,6 @@ a {
 .header-nav .all-nav:hover .all-nav-menu1 {
     display: block;
 }
-
 
 /* 左上角菜单 */
 
@@ -65,12 +59,15 @@ a {
     z-index: 1;
     border-right: 1px solid #474b4d;
 }
-
+.header-nav .all-nav .all-nav-menu1>ul{
+    width: 200px;
+    margin-top: 20px;
+}
 .header-nav .all-nav .all-nav-menu1>ul>li {
-    width: 160px;
-    height: 36px;
-    line-height: 36px;
-    padding: 15px 20px 0;
+    
+    height: 24px;
+    line-height: 24px;
+    padding: 6px 20px;
     position: relative;
     font-size: 14px;
     cursor: pointer;
@@ -82,24 +79,22 @@ a {
 
 .header-nav .all-nav .all-nav-menu1>ul>li>i {
     position: absolute;
-    top: 15px;
+    top: 4px;
     right: 15px;
     font-style: normal;
     color: #fff;
+    font-size: 25px;
 }
 
-.header-nav .all-nav .all-nav-menu1>ul>li:hover i,
-.header-nav .all-nav .all-nav-menu1>ul>li:hover a {
+.header-nav .all-nav .all-nav-menu1>ul>li:hover i, .header-nav .all-nav .all-nav-menu1>ul>li:hover a {
     color: #00C1DE;
 }
-
-
 
 /*二级菜单*/
 
 .header-nav .all-nav .all-nav-menu1>ul>li ul.menu2 {
     position: absolute;
-    top: 0;
+    top: -20px;
     left: 201px;
     background-color: #303538;
     width: 320px;
@@ -145,28 +140,27 @@ a {
     margin: 17px;
 }
 
-.header-nav .message {
+.header-nav input.message {
     width: 250px;
     height: 48px;
-    float: left;
-    margin-left: 570px;
+    float: right;
     border: 1px solid #262C30;
     outline: none;
     padding-left: 10px;
     padding-right: 40px;
     background-color: #262C30;
     color: #fff;
+    font-size: 14px;
 }
 .header-nav .message:focus{
     border-color: #00C1E0;
 }
 .header-nav .big-search {
-    font-family: 'icomoon';
     color: #fff;
     font-style: normal;
     position: absolute;
-    top: 19px;
-    left: 970px;
+    top: 15px;
+    right: 465px;
     border: 0;
     background: rgba(0, 0, 0, 0);
     outline: none;
@@ -182,7 +176,7 @@ a {
 .header-nav .service li {
     float: left;
     color: #fff;
-    padding: 0 15px;
+    padding: 0 12px;
     line-height: 50px;
     text-align: center;
 }
@@ -266,8 +260,7 @@ a {
     border-style: solid;
     border-color: transparent transparent #fff transparent;
     display: none;
-    /*position: absolute;
-    bottom: 0;*/
+
     margin: auto;
     margin-top: -20px;
 }
@@ -285,12 +278,12 @@ a {
 }
 
 .drop-nav .free-register {
-    width: 120px;
     height: 51px;
     background-color: #00C1DE;
     float: right;
     border: 0;
     font-size: 14px;
+    padding: 0 32px;
 }
 
 .drop-nav .free-register a {
@@ -509,6 +502,11 @@ a {
     color: #2a3435;
     margin-top: 20px;
 }
+.product-active .left a:hover {
+    color:#19C7E1;
+    border-color: #19C7E1;
+    transition:1s all;
+}
 
 .product-active .left .p1 {
     font-size: 18px;
@@ -554,7 +552,7 @@ a {
 .product-active .service-box:hover {
     background-color: #fff;
     box-shadow: 0 0 8px 0 rgba(0, 0, 0, .15);
-    transition: 1s all;
+    transition: all .3s ease-in-out;
 }
 
 .product-active .service-box:hover .right-trangle {
@@ -642,6 +640,7 @@ a {
     width: 1440px;
     height: 420px;
     margin: 0 auto;
+    position: relative;
 }
 
 .solution a {
@@ -689,7 +688,59 @@ a {
     text-align: center;
     margin-top: 20px;
 }
+.solution a .mask .content{
+    display: none;
+}
+.solution a .mask .content p{
+    width: 242px;
+    height: 72px;
+    font-size: 14px;
+    line-height: 24px;
+    padding:0 23px;
+}
+.solution a .mask .content span{
+    display: block;
+    width: 122px;
+    height: 38px;
+    border:1px solid #fff;
+    text-align: center;
+    line-height: 38px;
+    color: #fff;
+    margin: 35px auto;
 
+}
+.solution a .mask .content span:hover{
+    background-color: #fff;
+    color: #33CDE5;
+    transition: all 0.5s;
+}
+.solution a .mask:hover .content{
+    display: block!important;
+    transition: all 1s;
+}
+.solution button{
+     width: 50px;
+    height: 420px;
+    position: absolute;
+    top: 0;
+    border:0;
+    background-color: transparent;
+    color: transparent;
+    outline: none;
+    font-size: 35px;
+}
+.solution .left{ 
+    left: 0;
+}
+.solution .right{
+    right: 0;
+} 
+
+.solution button:hover{
+    background-color: rgba(0,0,0,0.2)!important;
+    color: #fff;
+    
+}
 .service-container {
     width: 100%;
     height: 730px;
@@ -729,9 +780,35 @@ a {
     text-align: center;
 }
 
-.service-container .service .service-box div img {
+.service-container .service .service-box div.img>div {
     width: 75px;
     height: 75px;
+	margin: 0 auto;
+	background-size: 100%;
+}
+.service-container .service .service-box div .one {
+	background: url(../images/TB1.1fkLXXXXXXrXpXXXXXXXXXX-150-9000.jpg) 0 0 no-repeat;
+
+}
+.service-container .service .service-box div .two {
+	background: url(../images/TB1heGZLXXXXXaeapXXXXXXXXXX-150-9000.jpg) 0 0 no-repeat;
+
+}
+.service-container .service .service-box div .three {
+	background: url(../images/TB1icTcLXXXXXclXFXXXXXXXXXX-150-9000.jpg) 0 0 no-repeat;
+
+}
+.service-container .service .service-box div .four {
+	background: url(../images/TB1heGZLXXXXXaeapXXXXXXXXXX-150-9000.jpg) 0 0 no-repeat;
+
+}
+.service-container .service .service-box div .five {
+	background: url(../images/TB1.1fkLXXXXXXrXpXXXXXXXXXX-150-9000.jpg) 0 0 no-repeat;
+
+}
+.service-container .service .service-box div .six {
+	background: url(../images/TB1l3YmLXXXXXb9XXXXXXXXXXXX-150-9000.jpg) 0 0 no-repeat;
+
 }
 
 .service-container .service .service-box div p {
@@ -1142,6 +1219,10 @@ a {
 .footer .footer-bottom .about li a {
     color: #9B9EA0;
     font-size: 16px;
+    
+}
+.footer .footer-bottom .about li a:hover {
+    color: #28d0e9;
 }
 
 .footer .footer-bottom .link-wrap {
@@ -1151,7 +1232,9 @@ a {
 
 .footer .footer-bottom .link-wrap a.link-item {
     color: #7E8284;
-    margin-right: 15px;
+    margin-right: 19px;
+	margin-top: 10px;
+    cursor: pointer;
 }
 
 .footer .footer-bottom .link-wrap a.link-item:hover {
@@ -1174,7 +1257,9 @@ a {
     font-size: 12px;
     color: #939393;
 }
-
+.footer .footer-bottom img,.footer .footer-bottom span {
+    cursor: pointer;
+}
 .xiaoyun {
     width: 44px;
     height: 128px;
