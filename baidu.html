@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>百度一下</title>
-	<link rel="icon" href="img/baiduico.ico"/>
-	
+	<link rel="icon" href="https://www.baidu.com/favicon.ico" />
+
 	<style>
 		*{
 			padding: 0;
@@ -64,7 +65,7 @@
 		.search-box .photo{
 			width: 18px;
 			height: 16px;
-			background: #fff url(img/camera_new_5606e8f.png) 0 0 no-repeat;
+			background: #fff url(https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/soutu/img/camera_new_5606e8f.png) 0 0 no-repeat;
 			position: absolute;
 			top: 10px;
 			right: 110px;
@@ -77,32 +78,32 @@
 		}
 		.droplist{
 			position: absolute;
-			width: 535px;
+			width: 541px;
 			border:1px solid #ccc;
-			padding-left: 5px; 
 			border-top: 0;
 			top: 36px;
 			left: 0;
-			display: inline-block;
 			display: none;
 		}
 		.droplist li{
-			width: 541px;
+			padding-left: 5px; 
+			width: 536px;
 			height: 30px;
 			line-height: 30px;;
 		}
 		.droplist li:hover{
-			background-color: aliceblue
+			background-color: aliceblue;
 		}
 	</style>
 </head>
+
 <body>
 	<div class="container">
 		<div class="logo"></div>
 		<div class="search-box">
 			<form action="https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=0&rsv_idx=1&tn=baidu&wd=?" method="get" target="_blank">
 				<i class="photo"></i>
-				<input type="text" class="keyword" name="wd">
+				<input type="text" class="keyword" name="wd" autocomplete="off">
 				<ul class="droplist">
 					<li>nihap</li>
 				</ul>
@@ -112,26 +113,39 @@
 	</div>
 </body>
 <script>
-	 var sercahInput = document.getElementsByClassName("keyword")[0];
-    var droplist = document.getElementsByClassName("droplist")[0];
-    sercahInput.addEventListener("input",function(){
-       var _script = document.createElement("script");
-       _script.src = `http://suggestion.baidu.com/?wd=${this.value}&cb=callback`;
-       document.body.appendChild(_script);
-    });
-    function callback(data){
-        droplist.innerHTML = "";
-        data.s.forEach(item => {
-            var li = document.createElement("li");
-            li.innerText = item;
-            droplist.appendChild(li);
-        });
-        droplist.style.display = "block";
-    }
-    droplist.addEventListener("click",function(e){
-        console.log(e.target);
+	var sercahInput = document.getElementsByClassName("keyword")[0];
+	var droplist = document.getElementsByClassName("droplist")[0];
+	sercahInput.addEventListener("input", throttle(function () {
+		var _script = document.createElement("script");
+		_script.src = `http://suggestion.baidu.com/?wd=${this.value}&cb=callback`;
+		document.body.appendChild(_script);
+	},600,sercahInput));
+
+
+	function callback(data) {
+		droplist.innerHTML = "";
+		data.s.forEach(item => {
+			var li = document.createElement("li");
+			li.innerText = item;
+			droplist.appendChild(li);
+		});
+		droplist.style.display = "block";
+	}
+	droplist.addEventListener("click", function (e) {
 		sercahInput.value = e.target.innerText;
 		droplist.style.display = "none";
-    });
+	});
+	//节流
+	function throttle(callback, duration, context) { //回调函数 间隔时间 操作区域
+		var lasttime = 0;
+		return function (e) {
+			var now = new Date().getTime();
+			if (now - lasttime > duration) { //第一次一定会执行
+				callback.call(context, e); //用调这个函数来调用回调函数
+				lasttime = new Date().getTime(); //更新时间             
+			}
+		}
+	}
 </script>
+
 </html>
